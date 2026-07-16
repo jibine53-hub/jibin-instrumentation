@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Jibin Earnest — Instrument Technician | Calibration &amp; Loop Specialist</title>
+<meta name="description" content="Jibin Earnest — Instrument Technician with 8+ years across UAE, Qatar &amp; Saudi Arabia. Calibration, loop checking, HART &amp; Foundation Fieldbus, field instrumentation and industrial maintenance.">
+<meta name="keywords" content="Instrument Technician, Calibration Engineer, Loop Checking, HART, Foundation Fieldbus, Instrumentation, Dubai, Oil and Gas, Power Plant">
+<meta name="author" content="Jibin Earnest">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jibinearnest.github.io/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jibin Earnest — Instrument Technician">
+<meta property="og:description" content="8+ years of precision instrumentation, calibration and loop checking across UAE, Qatar and Saudi Arabia.">
+<meta property="og:image" content="https://jibinearnest.github.io/assets/og-cover.jpg">
+<meta property="og:url" content="https://jibinearnest.github.io/">
+<meta property="og:site_name" content="Jibin Earnest Portfolio">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jibin Earnest — Instrument Technician">
+<meta name="twitter:description" content="8+ years of precision instrumentation, calibration and loop checking across UAE, Qatar and Saudi Arabia.">
+<meta name="twitter:image" content="https://jibinearnest.github.io/assets/og-cover.jpg">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23030712'/%3E%3Ccircle cx='50' cy='50' r='30' fill='none' stroke='%2338bdf8' stroke-width='6'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%232563eb'/%3E%3C/svg%3E">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Jibin Earnest",
+  "jobTitle": "Instrument Technician",
+  "email": "jibine53@gmail.com",
+  "telephone": "+91-9778102985",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "UAE"
+  },
+  "sameAs": ["https://in.linkedin.com/in/jibin-earnest-4b7711119"],
+  "knowsAbout": ["Instrumentation", "Calibration", "Loop Checking", "HART Protocol", "Foundation Fieldbus", "Industrial Automation"]
+}
+</script>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- AOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div class="loader" id="loader" role="status" aria-label="Loading site">
+  <div class="loader-inner">
+    <svg class="loader-gauge" viewBox="0 0 120 120" aria-hidden="true">
+      <circle class="loader-track" cx="60" cy="60" r="52"></circle>
+      <circle class="loader-needle" cx="60" cy="60" r="52"></circle>
+    </svg>
+    <div class="loader-text">
+      <span class="loader-tag">JE-01</span>
+      <span class="loader-label">CALIBRATING INTERFACE<span class="loader-dots">...</span></span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- ============ ANIMATED BACKGROUND ============ -->
+<div class="bg-canvas" aria-hidden="true">
+  <canvas id="particleCanvas"></canvas>
+  <div class="bg-grid"></div>
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="mouse-glow" id="mouseGlow"></div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="navbar-inner container">
+    <a href="#home" class="nav-logo" aria-label="Jibin Earnest — home">
+      <span class="nav-logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
+      </span>
+      <span class="nav-logo-text">Jibin<em>Earnest</em></span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#about" class="nav-link"><span>01</span>About</a>
+      <a href="#skills" class="nav-link"><span>02</span>Skills</a>
+      <a href="#experience" class="nav-link"><span>03</span>Experience</a>
+      <a href="#certifications" class="nav-link"><span>04</span>Certs</a>
+      <a href="#projects" class="nav-link"><span>05</span>Sites</a>
+      <a href="#services" class="nav-link"><span>06</span>Services</a>
+      <a href="#contact" class="nav-link"><span>07</span>Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light and dark theme" aria-pressed="false">
+        <i class="fa-solid fa-moon" aria-hidden="true"></i>
+        <i class="fa-solid fa-sun" aria-hidden="true"></i>
+      </button>
+      <a href="#contact" class="btn btn-small btn-primary magnetic">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <nav aria-label="Mobile primary">
+    <a href="#about" class="mobile-link">01 <span>About</span></a>
+    <a href="#skills" class="mobile-link">02 <span>Skills</span></a>
+    <a href="#experience" class="mobile-link">03 <span>Experience</span></a>
+    <a href="#certifications" class="mobile-link">04 <span>Certifications</span></a>
+    <a href="#projects" class="mobile-link">05 <span>Site Deployments</span></a>
+    <a href="#services" class="mobile-link">06 <span>Services</span></a>
+    <a href="#testimonials" class="mobile-link">07 <span>Endorsements</span></a>
+    <a href="#contact" class="mobile-link">08 <span>Contact</span></a>
+  </nav>
+  <div class="mobile-menu-footer">
+    <a href="mailto:jibine53@gmail.com">jibine53@gmail.com</a>
+    <a href="tel:+919778102985">+91 97781 02985</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-frame" aria-hidden="true">
+      <span class="hero-frame-tag">JE // INSTRUMENT TECHNICIAN</span>
+      <span class="hero-frame-coord">DUBAI, UAE · 25.2048° N, 55.2708° E</span>
+    </div>
+
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="eyebrow" data-aos="fade-up">
+          <span class="eyebrow-dot" aria-hidden="true"></span>
+          LOOP STATUS: <span class="live-text">LIVE &amp; AVAILABLE</span>
+        </p>
+
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="80">
+          <span class="hero-title-line">I'm <span class="text-grad">Jibin Earnest</span></span>
+          <span class="hero-title-line hero-typed-line">
+            <span id="typedRole" class="typed-role"></span><span class="typed-cursor" aria-hidden="true">|</span>
+          </span>
+        </h1>
+
+        <p class="hero-desc" data-aos="fade-up" data-aos-delay="160">
+          Instrument Technician with <strong>8+ years</strong> installing, calibrating and
+          troubleshooting precision field instruments across oil &amp; gas and power
+          generation sites in the UAE, Qatar and Saudi Arabia — keeping every loop
+          accurate, every reading reliable.
+        </p>
+
+        <div class="hero-actions" data-aos="fade-up" data-aos-delay="240">
+          <a href="assets/Jibin-Earnest-CV.pdf" download class="btn btn-primary magnetic">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+          </a>
+          <a href="#contact" class="btn btn-outline magnetic">
+            Hire Me <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="hero-social" data-aos="fade-up" data-aos-delay="300" aria-label="Social links">
+          <a href="mailto:jibine53@gmail.com" class="social-icon magnetic" aria-label="Email Jibin"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://wa.me/919778102985" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="WhatsApp Jibin"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://in.linkedin.com/in/jibin-earnest-4b7711119" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="Jibin's LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="tel:+919778102985" class="social-icon magnetic" aria-label="Call Jibin"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left" data-aos-delay="200">
+        <div class="hero-photo-frame tilt-card">
+          <div class="hero-photo-glow" aria-hidden="true"></div>
+          <div class="hero-photo-placeholder">
+            <i class="fa-solid fa-user" aria-hidden="true"></i>
+            <span>Replace with<br>profile-photo.jpg</span>
+          </div>
+          <div class="hero-photo-ring" aria-hidden="true"></div>
+          <span class="floating-chip chip-1"><i class="fa-solid fa-gauge-high"></i> Calibration</span>
+          <span class="floating-chip chip-2"><i class="fa-solid fa-diagram-project"></i> HART / FF</span>
+          <span class="floating-chip chip-3"><i class="fa-solid fa-check-double"></i> 8+ Yrs</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator magnetic" aria-label="Scroll to About section">
+      <span class="scroll-indicator-track"><span class="scroll-indicator-dot"></span></span>
+      <span class="scroll-indicator-text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">PT-01 // PROFILE</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Precision is not a preference. <span class="text-grad">It's the job.</span>
+      </h2>
+
+      <div class="about-grid">
+        <div class="about-text" data-aos="fade-up" data-aos-delay="80">
+          <p>
+            I'm an Instrument Technician based in Dubai, UAE, with over eight years
+            spent inside process plants and power facilities — installing, testing,
+            calibrating and troubleshooting the instruments that keep production
+            safe and on-spec. My work has taken me through sites in Saudi Arabia,
+            Qatar and the UAE, across oil &amp; gas and power generation.
+          </p>
+          <p>
+            Day to day that means loop checking transmitters, calibrating pressure,
+            flow, temperature and level instruments, reading HART and Foundation
+            Fieldbus signals with an Emerson 475 communicator, and writing the
+            maintenance reports that make sure the next technician knows exactly
+            what was done and why. I've trained junior technicians on complex
+            measuring devices and supervised installation crews on live sites.
+          </p>
+          <p class="about-mission">
+            <strong>My mission</strong> is simple: every instrument I touch reads
+            true, every loop I check is trustworthy, and every report I file is
+            one a plant can stand on.
+          </p>
+        </div>
+
+        <div class="about-stats" data-aos="fade-up" data-aos-delay="160">
+          <div class="stat-card glass-card">
+            <span class="stat-icon"><i class="fa-solid fa-calendar-check"></i></span>
+            <span class="stat-number" data-count="8" data-suffix="+">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-icon"><i class="fa-solid fa-earth-asia"></i></span>
+            <span class="stat-number" data-count="3">0</span>
+            <span class="stat-label">Countries Worked</span>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-icon"><i class="fa-solid fa-industry"></i></span>
+            <span class="stat-number" data-count="4">0</span>
+            <span class="stat-label">Employers</span>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-icon"><i class="fa-solid fa-certificate"></i></span>
+            <span class="stat-number" data-count="2">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">IT-02 // INSTRUMENTATION STACK</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Built on <span class="text-grad">field-tested</span> skill.
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+        Every skill below has been used on a live loop, not a training slide.
+      </p>
+
+      <div class="skills-grid">
+
+        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-category-head">
+            <span class="skill-category-icon"><i class="fa-solid fa-gauge-high"></i></span>
+            <h3>Calibration &amp; Field Instruments</h3>
+          </div>
+          <ul class="skill-bars">
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Calibration &amp; Loop Checking</span><span class="skill-bar-pct">96%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="96"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Pressure / Flow / Temp / Level</span><span class="skill-bar-pct">94%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="94"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Valve Positioner Adjustment</span><span class="skill-bar-pct">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Pneumatic Systems</span><span class="skill-bar-pct">85%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="140">
+          <div class="skill-category-head">
+            <span class="skill-category-icon"><i class="fa-solid fa-tower-broadcast"></i></span>
+            <h3>Protocols &amp; Control Systems</h3>
+          </div>
+          <ul class="skill-bars">
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>HART Protocol</span><span class="skill-bar-pct">92%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Foundation Fieldbus</span><span class="skill-bar-pct">88%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Emerson 475 Field Communicator</span><span class="skill-bar-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Control Systems &amp; VFD</span><span class="skill-bar-pct">82%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="skill-category-head">
+            <span class="skill-category-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+            <h3>Maintenance &amp; Reliability</h3>
+          </div>
+          <ul class="skill-bars">
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Preventive Maintenance</span><span class="skill-bar-pct">95%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Corrective Maintenance</span><span class="skill-bar-pct">93%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Troubleshooting &amp; Root-Cause Analysis</span><span class="skill-bar-pct">94%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="94"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Installation &amp; Cable Termination</span><span class="skill-bar-pct">90%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-category glass-card" data-aos="fade-up" data-aos-delay="260">
+          <div class="skill-category-head">
+            <span class="skill-category-icon"><i class="fa-solid fa-users-gear"></i></span>
+            <h3>Leadership &amp; Documentation</h3>
+          </div>
+          <ul class="skill-bars">
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Team Leadership &amp; Training</span><span class="skill-bar-pct">89%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="89"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Maintenance Report Writing</span><span class="skill-bar-pct">91%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="91"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Vendor &amp; Spares Coordination</span><span class="skill-bar-pct">84%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="84"></div></div>
+            </li>
+            <li class="skill-bar">
+              <div class="skill-bar-top"><span>Time Management &amp; Punctuality</span><span class="skill-bar-pct">97%</span></div>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-width="97"></div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="skill-tools" data-aos="fade-up" data-aos-delay="100">
+        <span class="skill-tool-label">Also fluent in:</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Analytical Instruments</span>
+          <span class="skill-tag">Process Control Optimization</span>
+          <span class="skill-tag">Inspection &amp; Repair</span>
+          <span class="skill-tag">Welding &amp; Power Tools</span>
+          <span class="skill-tag">MS Office</span>
+          <span class="skill-tag">Industrial Safety</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE TIMELINE ============ -->
+  <section class="section" id="experience">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">LT-03 // LOOP HISTORY</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Four sites. <span class="text-grad">One standard.</span>
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+        A chronological loop of every plant I've kept running, most recent first.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-node" aria-hidden="true"><span>TAG&nbsp;04</span></div>
+          <div class="timeline-card glass-card tilt-card">
+            <div class="timeline-card-head">
+              <div>
+                <h3>Instrument Technician</h3>
+                <span class="timeline-company">IYYM</span>
+              </div>
+              <span class="timeline-flag" title="United Arab Emirates">🇦🇪 UAE</span>
+            </div>
+            <span class="timeline-dates"><i class="fa-regular fa-calendar"></i> September 2023 — Present</span>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Dubai, UAE</p>
+            <ul class="timeline-resp">
+              <li>Install, maintain and calibrate process control instrumentation on active sites.</li>
+              <li>Perform loop checking on temperature, flow, level and pressure transmitters.</li>
+              <li>Diagnose faults using HART and Foundation Fieldbus communication tools.</li>
+              <li>Prepare maintenance and calibration reports for engineering review.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-node" aria-hidden="true"><span>TAG&nbsp;03</span></div>
+          <div class="timeline-card glass-card tilt-card">
+            <div class="timeline-card-head">
+              <div>
+                <h3>Senior Instrument Technician</h3>
+                <span class="timeline-company">Voltech Engineers Pvt Ltd</span>
+              </div>
+              <span class="timeline-flag" title="United Arab Emirates">🇦🇪 UAE</span>
+            </div>
+            <span class="timeline-dates"><i class="fa-regular fa-calendar"></i> March 2022 — May 2023</span>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> UAE</p>
+            <ul class="timeline-resp">
+              <li>Supervised installation and commissioning of electronic field equipment.</li>
+              <li>Led corrective maintenance and root-cause troubleshooting on instrumentation systems.</li>
+              <li>Trained and guided junior technicians on complex measuring devices.</li>
+              <li>Coordinated with vendors for spare-parts procurement on live projects.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-node" aria-hidden="true"><span>TAG&nbsp;02</span></div>
+          <div class="timeline-card glass-card tilt-card">
+            <div class="timeline-card-head">
+              <div>
+                <h3>Instrumentation Technician</h3>
+                <span class="timeline-company">Petroserv Limited WLL</span>
+              </div>
+              <span class="timeline-flag" title="Qatar">🇶🇦 Qatar</span>
+            </div>
+            <span class="timeline-dates"><i class="fa-regular fa-calendar"></i> December 2018 — January 2022</span>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Doha, Qatar</p>
+            <ul class="timeline-resp">
+              <li>Carried out preventive and corrective maintenance across an oil &amp; gas facility.</li>
+              <li>Performed glanding, cable termination and instrument panel installation.</li>
+              <li>Tested and calibrated pressure, flow, level and temperature transmitters.</li>
+              <li>Operated hand, power and specialized instrumentation tools on daily field rounds.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-up">
+          <div class="timeline-node" aria-hidden="true"><span>TAG&nbsp;01</span></div>
+          <div class="timeline-card glass-card tilt-card">
+            <div class="timeline-card-head">
+              <div>
+                <h3>Instrumentation Technician</h3>
+                <span class="timeline-company">N.SH — Saudi Aramco DOW Project / IE Power Plant</span>
+              </div>
+              <span class="timeline-flag" title="Saudi Arabia">🇸🇦 KSA</span>
+            </div>
+            <span class="timeline-dates"><i class="fa-regular fa-calendar"></i> February 2014 — March 2016</span>
+            <p class="timeline-location"><i class="fa-solid fa-location-dot"></i> Jubail, Saudi Arabia</p>
+            <ul class="timeline-resp">
+              <li>Installed and tested field instruments on a major petrochemical construction project.</li>
+              <li>Performed loop checking and final testing before equipment handover.</li>
+              <li>Maintained and repaired electronics equipment on power plant systems.</li>
+              <li>Applied industrial safety procedures across construction and commissioning phases.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CERTIFICATIONS ============ -->
+  <section class="section section-alt" id="certifications">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">CT-04 // CERTIFICATIONS</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Credentials that <span class="text-grad">back the work.</span>
+      </h2>
+
+      <div class="cert-grid">
+        <div class="cert-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="80">
+          <span class="cert-icon"><i class="fa-solid fa-fire-flame-curved"></i></span>
+          <h3>Diploma in Industrial Safety &amp; Fire Safety</h3>
+          <p>One-year diploma covering industrial safety systems, fire prevention and emergency response for process plant environments.</p>
+          <span class="cert-duration"><i class="fa-regular fa-clock"></i> 1 Year Program</span>
+        </div>
+
+        <div class="cert-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="140">
+          <span class="cert-icon"><i class="fa-solid fa-leaf"></i></span>
+          <h3>Environmental Health &amp; Safety (EHS)</h3>
+          <p>Certification in environmental, health and safety practices applied across industrial and construction sites.</p>
+          <span class="cert-duration"><i class="fa-regular fa-clock"></i> Certified</span>
+        </div>
+
+        <div class="cert-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="cert-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+          <h3>Diploma in Engineering — Instrumentation &amp; Control</h3>
+          <p>Tamil Nadu Board of Technical Education, 2013. Core engineering foundation in instrumentation and control theory.</p>
+          <span class="cert-duration"><i class="fa-regular fa-clock"></i> 2013</span>
+        </div>
+      </div>
+
+      <div class="education-strip" data-aos="fade-up" data-aos-delay="120">
+        <div class="edu-item">
+          <span class="edu-year">2013</span>
+          <div>
+            <h4>Diploma in Engineering — Instrumentation &amp; Control</h4>
+            <p>Tamil Nadu Board of Technical Education</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <span class="edu-year">2010</span>
+          <div>
+            <h4>Higher Secondary</h4>
+            <p>St. Goretti HSS · Board of Higher Secondary Examination, Kerala</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <span class="edu-year">2008</span>
+          <div>
+            <h4>SSLC</h4>
+            <p>Board of Public Examination, Kerala</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS / SITE DEPLOYMENTS ============ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">FT-05 // SITE DEPLOYMENTS</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Plants I've <span class="text-grad">kept in spec.</span>
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+        Real sites, not renders. Click a card for scope details.
+      </p>
+
+      <div class="project-gallery">
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="80"
+          data-title="Saudi Aramco DOW Project — IE Power Plant"
+          data-meta="N.SH · Jubail, Saudi Arabia · Feb 2014 – Mar 2016"
+          data-desc="Field instrumentation installation and loop testing on a major petrochemical / power-plant construction project. Handled instrument installation, loop checking, final testing and electronics maintenance ahead of commissioning.">
+          <div class="project-media">
+            <div class="project-media-fallback"><i class="fa-solid fa-industry"></i></div>
+            <div class="project-overlay">
+              <span class="project-view">View Scope <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Power Plant · KSA</span>
+            <h3>Saudi Aramco DOW Project / IE Power Plant</h3>
+            <p>Instrument installation &amp; loop testing, Jubail</p>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="140"
+          data-title="Petroserv Limited WLL"
+          data-meta="Doha, Qatar · Dec 2018 – Jan 2022"
+          data-desc="Preventive and corrective maintenance across an oil &amp; gas facility. Cable termination, glanding, panel installation, and calibration of pressure, flow, level and temperature transmitters on a continuous rotation.">
+          <div class="project-media">
+            <div class="project-media-fallback"><i class="fa-solid fa-oil-well"></i></div>
+            <div class="project-overlay">
+              <span class="project-view">View Scope <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Oil &amp; Gas · Qatar</span>
+            <h3>Petroserv Limited WLL</h3>
+            <p>Field maintenance &amp; calibration, Doha</p>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="200"
+          data-title="Voltech Engineers Pvt Ltd"
+          data-meta="UAE · Mar 2022 – May 2023"
+          data-desc="Senior technician role supervising installation and commissioning of electronic field equipment, leading corrective maintenance, and mentoring junior technicians on complex measuring devices.">
+          <div class="project-media">
+            <div class="project-media-fallback"><i class="fa-solid fa-diagram-project"></i></div>
+            <div class="project-overlay">
+              <span class="project-view">View Scope <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Engineering Contractor · UAE</span>
+            <h3>Voltech Engineers Pvt Ltd</h3>
+            <p>Senior technician &amp; site supervision</p>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" data-aos="fade-up" data-aos-delay="260"
+          data-title="IYYM"
+          data-meta="Dubai, UAE · Sep 2023 – Present"
+          data-desc="Current role covering instrument installation, calibration, loop checking and troubleshooting using HART and Foundation Fieldbus protocols, with ongoing maintenance reporting.">
+          <div class="project-media">
+            <div class="project-media-fallback"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="project-overlay">
+              <span class="project-view">View Scope <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Current Role · UAE</span>
+            <h3>IYYM</h3>
+            <p>Instrumentation &amp; calibration, Dubai</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div class="project-modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitle">
+    <div class="project-modal-backdrop" id="modalBackdrop"></div>
+    <div class="project-modal-panel glass-card">
+      <button class="project-modal-close" id="modalClose" aria-label="Close details"><i class="fa-solid fa-xmark"></i></button>
+      <span class="project-modal-tag" id="modalTag">Site</span>
+      <h3 id="modalTitle">Title</h3>
+      <p class="project-modal-meta" id="modalMeta">Meta</p>
+      <p class="project-modal-desc" id="modalDesc">Description</p>
+    </div>
+  </div>
+
+  <!-- ============ SERVICES ============ -->
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">ST-06 // SERVICES</p>
+      <h2 class="section-title" data-aos="fade-up">
+        What I bring <span class="text-grad">on-site.</span>
+      </h2>
+
+      <div class="services-grid">
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="80">
+          <span class="service-icon"><i class="fa-solid fa-gauge-high"></i></span>
+          <h3>Instrument Calibration</h3>
+          <p>Precision calibration of pressure, flow, temperature and level instruments to manufacturer and plant specification.</p>
+        </div>
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="140">
+          <span class="service-icon"><i class="fa-solid fa-diagram-project"></i></span>
+          <h3>Loop Checking &amp; Commissioning</h3>
+          <p>End-to-end loop verification and commissioning support using HART and Foundation Fieldbus tooling.</p>
+        </div>
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="200">
+          <span class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+          <h3>Preventive &amp; Corrective Maintenance</h3>
+          <p>Scheduled and reactive maintenance programs that reduce downtime and extend instrument life.</p>
+        </div>
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="260">
+          <span class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+          <h3>Fault Diagnosis &amp; Troubleshooting</h3>
+          <p>Root-cause analysis on complex instrumentation faults, backed by detailed field test reporting.</p>
+        </div>
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="320">
+          <span class="service-icon"><i class="fa-solid fa-chalkboard-user"></i></span>
+          <h3>Technician Training &amp; Mentoring</h3>
+          <p>On-site training for junior technicians on measuring devices, safety practice and reporting standards.</p>
+        </div>
+        <div class="service-card glass-card tilt-card" data-aos="fade-up" data-aos-delay="380">
+          <span class="service-icon"><i class="fa-solid fa-file-signature"></i></span>
+          <h3>Technical Documentation</h3>
+          <p>Clear, audit-ready maintenance and calibration reports that hand off cleanly between shifts and teams.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS / ENDORSEMENTS ============ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">ET-07 // ENDORSEMENTS</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Recommendations <span class="text-grad">in progress.</span>
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+        This section is reserved for real feedback from supervisors and colleagues —
+        nothing here is invented. Connect on LinkedIn to leave one.
+      </p>
+
+      <div class="testimonial-empty glass-card" data-aos="fade-up" data-aos-delay="120">
+        <span class="testimonial-empty-icon"><i class="fa-regular fa-comment-dots"></i></span>
+        <h3>No endorsements published yet</h3>
+        <p>Supervisor and colleague recommendations will appear here once added — this
+          space intentionally isn't filled with placeholder quotes.</p>
+        <a href="https://in.linkedin.com/in/jibin-earnest-4b7711119" target="_blank" rel="noopener" class="btn btn-outline btn-small magnetic">
+          <i class="fa-brands fa-linkedin-in"></i> Recommend on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <p class="section-tag" data-aos="fade-up">XT-08 // CONTACT</p>
+      <h2 class="section-title" data-aos="fade-up">
+        Let's get the <span class="text-grad">loop closed.</span>
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="60">
+        Open to new instrumentation roles and contracts across the UAE and GCC.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-up" data-aos-delay="100">
+          <a href="mailto:jibine53@gmail.com" class="contact-item glass-card magnetic">
+            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div><span class="contact-label">Email</span><span class="contact-value">jibine53@gmail.com</span></div>
+          </a>
+          <a href="tel:+919778102985" class="contact-item glass-card magnetic">
+            <span class="contact-icon"><i class="fa-solid fa-phone"></i></span>
+            <div><span class="contact-label">Phone</span><span class="contact-value">+91 97781 02985</span></div>
+          </a>
+          <a href="https://wa.me/919778102985" target="_blank" rel="noopener" class="contact-item glass-card magnetic">
+            <span class="contact-icon"><i class="fa-brands fa-whatsapp"></i></span>
+            <div><span class="contact-label">WhatsApp</span><span class="contact-value">Message directly</span></div>
+          </a>
+          <a href="https://in.linkedin.com/in/jibin-earnest-4b7711119" target="_blank" rel="noopener" class="contact-item glass-card magnetic">
+            <span class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></span>
+            <div><span class="contact-label">LinkedIn</span><span class="contact-value">jibin-earnest-4b7711119</span></div>
+          </a>
+          <div class="contact-item glass-card">
+            <span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span>
+            <div><span class="contact-label">Based in</span><span class="contact-value">Dubai, UAE</span></div>
+          </div>
+
+          <div class="contact-map glass-card" aria-hidden="true">
+            <iframe title="Dubai, UAE map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Dubai,United+Arab+Emirates&output=embed"></iframe>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card" id="contactForm" data-aos="fade-up" data-aos-delay="160" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" required autocomplete="name" aria-required="true">
+              <span class="form-error" id="err-name"></span>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" required autocomplete="email" aria-required="true">
+              <span class="form-error" id="err-email"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cf-subject">Subject</label>
+            <input type="text" id="cf-subject" name="subject" required aria-required="true">
+            <span class="form-error" id="err-subject"></span>
+          </div>
+          <div class="form-group">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required aria-required="true"></textarea>
+            <span class="form-error" id="err-message"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block magnetic">
+            <span class="btn-text">Send Message</span>
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="#home" class="nav-logo">
+        <span class="nav-logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="16" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="20" cy="20" r="5" fill="currentColor"/></svg>
+        </span>
+        <span class="nav-logo-text">Jibin<em>Earnest</em></span>
+      </a>
+      <p>Instrument Technician · Calibration &amp; Loop Specialist<br>Dubai, United Arab Emirates</p>
+      <div class="footer-social">
+        <a href="mailto:jibine53@gmail.com" class="social-icon magnetic" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://wa.me/919778102985" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://in.linkedin.com/in/jibin-earnest-4b7711119" target="_blank" rel="noopener" class="social-icon magnetic" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="tel:+919778102985" class="social-icon magnetic" aria-label="Call"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Site Deployments</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="footer-links">
+      <h4>Details</h4>
+      <span>Diploma — Instrumentation &amp; Control</span>
+      <span>English · Malayalam · Hindi</span>
+      <span>Available for UAE / GCC roles</span>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container footer-bottom-inner">
+      <p>&copy; <span id="year"></span> Jibin Earnest. All rights reserved.</p>
+      <button class="back-to-top magnetic" id="backToTop" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS (CDN) ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
