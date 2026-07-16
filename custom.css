@@ -1,0 +1,64 @@
+/* ==========================================================================
+   CUSTOM.CSS - PREMIUM AWWWARDS-TIER OVERRIDE ARCHITECTURE
+   ========================================================================== */
+
+@charset "UTF-8";
+
+:root {
+    --bg-primary: #030712 !important;
+    --bg-secondary: #0b0f19 !important;
+    --color-primary: #2563eb !important;
+    --color-accent: #38bdf8 !important;
+    
+    /* Advanced Luxury Tokens */
+    --aurora-1: rgba(37, 99, 235, 0.18);
+    --aurora-2: rgba(56, 189, 248, 0.15);
+    --aurora-3: rgba(147, 51, 234, 0.12);
+    --glass-bg-premium: rgba(5, 10, 25, 0.65);
+    --glass-border-premium: rgba(255, 255, 255, 0.07);
+    --glow-premium: 0 0 35px rgba(56, 189, 248, 0.25);
+    --premium-shadow-apple: 0 30px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    --font-heading: 'Space Grotesk', sans-serif !important;
+    --font-body: 'Poppins', sans-serif !important;
+}
+
+/* ==========================================================================
+   15. PERFORMANCE OPTIMIZATION (GPU ACCELERATION)
+   ========================================================================== */
+.glass-card, 
+.btn, 
+.nav-link, 
+.timeline-card, 
+.metric-card, 
+.progress-fill, 
+.photo-frame-glow,
+.photo-placeholder img,
+.hero-photo-placeholder img {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* ==========================================================================
+   1. IMAGE RECOVERY & VISIBILITY ENGINE (ZERO BROKEN PLACEHOLDERS)
+   ========================================================================== */
+/* Generic Image Alignment Safeguard */
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Hide legacy icon structural anchors inside the profile frame */
+.photo-placeholder .industrial-icon-bg,
+.photo-placeholder .overlay-mesh {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Automatically display profile image in the placeholder frame */
+.photo-placeholder {
+    background: url('profile-photo.png') center center / cover no-repeat !important;
+    position: relative;
